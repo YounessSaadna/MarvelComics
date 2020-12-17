@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 
@@ -11,9 +11,7 @@ class AppInfo extends React.Component {
 
     render() {
         return (
-
             <>
-            
                 <View style={styles.body}>
                     <View>
                         <Text style={styles.textinfo}>
@@ -35,7 +33,6 @@ class AppInfo extends React.Component {
                     </View>
                 </View>
             </>
-
         );
     };
 }
@@ -48,6 +45,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         padding: '25%',
     },
+
     textinfo: {
         textAlign: 'center',
     },

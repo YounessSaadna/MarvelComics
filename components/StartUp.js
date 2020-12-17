@@ -3,14 +3,11 @@ import { Actions } from 'react-native-router-flux';
 
 
 
-import { Animated, View, StyleSheet, ScrollView, Text, Image, SafeAreaView } from 'react-native';
-
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { Animated, View, StyleSheet, Image } from 'react-native';
 
 class StartUp extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             loading: false,
             LogoAnime: new Animated.Value(0),
@@ -19,7 +16,6 @@ class StartUp extends React.Component {
 
     componentDidMount() {
         const { LogoAnime } = this.state;
-
         Animated.parallel([
             Animated.spring(LogoAnime, {
                 toValue: 1,
@@ -42,15 +38,10 @@ class StartUp extends React.Component {
         setTimeout(() => {
             Actions.AppInfo();
         }, 2000)
-
-
     }
 
-
     render() {
-
         return (
-
             <View style={styles.rectangle}>
                 <Animated.View style={{
                     opacity: this.state.LogoAnime,
@@ -62,13 +53,9 @@ class StartUp extends React.Component {
                     <Image style={styles.image} source={require('../assets/images/logo1.png')} />
                 </Animated.View>
             </View>
-
-
         );
-
     }
 }
-
 
 const styles = StyleSheet.create({
     rectangle: {
